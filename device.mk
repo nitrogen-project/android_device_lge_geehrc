@@ -36,7 +36,8 @@ PRODUCT_PACKAGES := \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
-	lights.geehrc
+        camera.geehrc \
+	lights.geehrc \
 
 PRODUCT_PACKAGES += \
     charger_res_images

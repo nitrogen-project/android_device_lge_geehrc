@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+TARGET_SPECIFIC_HEADER_PATH := device/lge/geehrc/include
+
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
