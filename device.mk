@@ -113,7 +113,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     libnfc \
     libnfc_jni \
-    NfcNci \
+    Nfc \
     Tag
 
 # NFCEE access control
