@@ -50,7 +50,7 @@ PRODUCT_COPY_FILES += \
 	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 	device/lge/geehrc/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin \
-	device/lge/geehrc/init.geehrc.wifi.sh:system/etc/init.geehrc.wifi.sh
+	device/lge/geehrc/init.geehrc.wifi.sh:system/bin/init.geehrc.wifi.sh
 
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf
@@ -201,7 +201,7 @@ PRODUCT_PACKAGES += \
 	hci_qcomm_init
 
 PRODUCT_COPY_FILES += \
-	device/lge/geehrc/init.geehrc.bt.sh:system/etc/init.geehrc.bt.sh
+	device/lge/geehrc/init.geehrc.bt.sh:system/bin/init.geehrc.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
