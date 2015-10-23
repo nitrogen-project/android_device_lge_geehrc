@@ -41,11 +41,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-LOCAL_KERNEL := device/lge/geehrc/kernel
-
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
-
 PRODUCT_COPY_FILES += \
 	device/lge/geehrc/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/lge/geehrc/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
