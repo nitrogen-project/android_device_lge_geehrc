@@ -117,4 +117,18 @@ EXTENDED_FONT_FOOTPRINT := true
 
 MALLOC_IMPL := dlmalloc
 
+#TWRP config
+TW_THEME := portrait_hdpi
+TW_THEME_LANDSCAPE := landscape_hdpi
+RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_USB_STORAGE := true
+TW_BRIGHTNESS_PATH := /sys/class/backlight/lm3530/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_EXCLUDE_ENCRYPTED_BACKUPS := true
+
+#Asserts
+TARGET_OTA_ASSERT_DEVICE := gee,geeb,geehrc,e975,geehrc_4g_spr,geespr,ls970,geehrc4g,geehrc4g_spr_us,geebus,e970,e973,e971,geeb_att_us
+
 -include vendor/lge/geehrc/BoardConfigVendor.mk
