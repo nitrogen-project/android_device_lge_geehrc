@@ -5,6 +5,7 @@ type kickstart_exec, file_type, exec_type;
 init_daemon_domain(kickstart)
 
 allow kickstart self:capability dac_override;
+auditallow kickstart self:capability dac_override;
 
 # Let qcks access /dev/mdm node (modem driver)
 allow kickstart radio_device:chr_file r_file_perms;
@@ -28,6 +29,7 @@ allow keystore self:process execmem;
 
 # Run dd from toolbox on firmware files
 allow kickstart shell_exec:file rx_file_perms;
+allow kickstart kickstart_exec:file rx_file_perms;
 allow kickstart self:process execmem;
 allow kickstart system_file:file execute_no_trans;
 allow kickstart property_socket:sock_file write;
