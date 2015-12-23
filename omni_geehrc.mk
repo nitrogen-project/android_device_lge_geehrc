@@ -1,6 +1,5 @@
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 768
+# Bootanimation
+TARGET_BOOTANIMATION_SIZE := 720x407
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
