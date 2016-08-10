@@ -34,7 +34,8 @@ logi "DUTADDR : $DUTADDR"
 #load bd addr
 if [$DUTADDR == ""]
 then
-BDADDR=`/system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -x`
+/system/bin/btnvtool -O
+BDADDR=`/system/bin/bdAddrLoader -f /persist/.bt_nv.bin -h -x`
 else
 BDADDR=`/system/bin/bdAddrLoader -p net.btdut.address -s -x`
 fi
