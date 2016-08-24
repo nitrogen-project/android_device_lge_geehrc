@@ -32,17 +32,17 @@
     <integer name="config_defaultNotificationLedOff">9000</integer>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
-    <bool name="config_intrusiveNotificationLed">true</bool>
+    <!--bool name="config_intrusiveNotificationLed">true</bool-->
 
     <!-- Does the notification LED support multiple colors?
-         Used to decide if the user can change the colors
-    <bool name="config_multiColorNotificationLed">true</bool> -->
+         Used to decide if the user can change the colors-->
+    <!--bool name="config_multiColorNotificationLed">true</bool-->
 
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option --> 
-    <bool name="config_intrusiveBatteryLed">true</bool>
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option-->
+    <!--bool name="config_intrusiveBatteryLed">true</bool-->
 
-    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
-    <bool name="config_multiColorBatteryLed">true</bool>
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors-->
+    <!--bool name="config_multiColorBatteryLed">true</bool-->
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -115,8 +115,8 @@
     </integer-array>
 
     <!-- Boolean indicating whether we want button brightness support -->
-    <bool name="config_button_brightness_support">true</bool>
-    <integer name="config_button_brightness_default">255</integer>
+    <!--bool name="config_button_brightness_support">true</bool-->
+    <!--integer name="config_button_brightness_default">255</integer-->
 
     <!-- Minimum screen brightness allowed by the power manager. -->
     <integer name="config_screenBrightnessDim">1</integer>
@@ -295,7 +295,7 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">7</integer>
+    <!--integer name="config_deviceHardwareKeys">7</integer-->
 
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
@@ -337,4 +337,5 @@
          correctly use them when installed on your device.  Otherwise, keep this disabled
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
+
 </resources>

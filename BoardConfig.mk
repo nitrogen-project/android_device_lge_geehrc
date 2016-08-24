@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2016 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,8 +28,9 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 
 # Inline kernel
-TARGET_KERNEL_CONFIG := gee_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/gee
+KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin/arm-eabi-
+TARGET_KERNEL_CONFIG := geehrc_defconfig	
+TARGET_KERNEL_SOURCE := kernel/lge/geehrc
 
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -107,12 +108,12 @@ BOARD_USES_CAMERA_FAST_AUTOFOCUS := true
 
 BOARD_HAL_STATIC_LIBRARIES := libdumpstate.geehrc
 
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
-BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
+#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
+#BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 TARGET_NO_RPC := true
 
-BOARD_SEPOLICY_DIRS += \
-       device/lge/geehrc/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#       device/lge/geehrc/sepolicy
 
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
@@ -125,8 +126,6 @@ USE_MINIKIN := true
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-MALLOC_IMPL := dlmalloc
 
 #TWRP config
 TW_THEME := portrait_hdpi
@@ -147,8 +146,5 @@ MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/lge/geehrc/recovery/twrp.fstab
 MR_KEXEC_MEM_MIN := 0x85000000
-
-#Asserts
-TARGET_OTA_ASSERT_DEVICE := gee,geeb,geehrc,e975,geehrc_4g_spr,geespr,ls970,geehrc4g,geehrc4g_spr_us,geebus,e970,e973,e971,geeb_att_us
 
 -include vendor/lge/geehrc/BoardConfigVendor.mk

@@ -1,2 +1,0 @@
-allow hci_attach persist_file:dir search;
-allow hci_attach persist_file:file { read open };
