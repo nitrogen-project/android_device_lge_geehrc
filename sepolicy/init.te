@@ -1,0 +1,4 @@
+allow init kernel:system syslog_read;
+allow init fuse:dir mounton;
+allow init tmpfs:lnk_file create_file_perms;
+allow init diag_device:chr_file unlink;
