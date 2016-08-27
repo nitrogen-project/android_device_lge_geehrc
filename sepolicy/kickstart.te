@@ -32,6 +32,7 @@ allow kickstart shell_exec:file rx_file_perms;
 allow kickstart kickstart_exec:file rx_file_perms;
 allow kickstart self:process execmem;
 allow kickstart system_file:file execute_no_trans;
+allow kickstart toolbox_exec:file rx_file_perms;
 allow kickstart property_socket:sock_file write;
 allow kickstart radio_prop:property_service set;
 allow kickstart init:unix_stream_socket { connectto read write };
