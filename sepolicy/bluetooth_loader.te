@@ -7,6 +7,7 @@ init_daemon_domain(bluetooth_loader)
 
 # Run init.geehrc.bt.sh
 allow bluetooth_loader shell_exec:file rx_file_perms;
+allow bluetooth_loader shell_exec:file { getattr entrypoint read };
 allow bluetooth_loader bluetooth_loader_exec:file { getattr open execute_no_trans };
 
 # init.geehrc.bt.sh needs /system/bin/log access
