@@ -194,7 +194,6 @@ PRODUCT_PACKAGES += libqcomvoiceprocessing
 PRODUCT_COPY_FILES += \
     device/lge/geehrc/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     device/lge/geehrc/audio_policy.conf:system/etc/audio_policy.conf \
-    device/lge/geehrc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     device/lge/geehrc/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_PACKAGES += \
