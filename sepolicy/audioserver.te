@@ -1,0 +1,4 @@
+allow audioserver qmuxd_socket:dir { create open write search add_name};
+allow audioserver qmuxd_socket:sock_file { create open write setattr};
+allow audioserver audioserver:socket { create };
+allow audioserver qmux:unix_stream_socket { connectto };

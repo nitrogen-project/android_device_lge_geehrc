@@ -11,7 +11,7 @@ type smd_device, dev_type;
 type efs_block_device, dev_type;
 
 # pseudo-NV for this hardware
-type misc_block_device, dev_type;
+#type misc_block_device, dev_type;
 
 # rmt_storage...
 type rmt_block_device, dev_type;

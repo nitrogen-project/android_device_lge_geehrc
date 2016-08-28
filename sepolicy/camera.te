@@ -25,3 +25,12 @@ unix_socket_connect(camera, sensors, sensors)
 allow camera sensors_socket:sock_file read;
 
 allow camera system_file:file execmod;
+allow camera sysfs:file { getattr read write open };
+allow camera apk_data_file:dir { getattr read write open search };
+allow camera ion_device:chr_file { getattr ioctl read write open };
+allow camera storage_file:dir { getattr read write open search };
+allow camera storage_file:lnk_file { getattr read write open };
+allow camera mnt_user_file:dir { getattr read write open search };
+allow camera mnt_user_file:lnk_file { getattr read write open };
+allow camera fuse:dir { getattr read write open search };
+allow camera cameraserver:fd { use };
