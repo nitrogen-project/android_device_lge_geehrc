@@ -21,10 +21,10 @@
 
 DEVICE_PACKAGE_OVERLAYS := device/lge/geehrc/overlay
 
-LOCAL_KERNEL := device/lge/geehrc/kernel
+#LOCAL_KERNEL := device/lge/geehrc/kernel
 
-PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel
+#PRODUCT_COPY_FILES := \
+#    $(LOCAL_KERNEL):kernel
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -114,12 +114,8 @@ PRODUCT_PACKAGES += \
     Nfc \
     Tag
 
-# NFCEE access control
-NFCEE_ACCESS_PATH := device/lge/geehrc/nfc/nfcee_access.xml
-
 # NFC feature files + configuration
 PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
     device/lge/geehrc/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf

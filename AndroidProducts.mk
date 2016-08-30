@@ -16,4 +16,5 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_geehrc.mk \
+    $(LOCAL_DIR)/nitrogen_geehrc.mk \
     $(LOCAL_DIR)/full_geehrc.mk

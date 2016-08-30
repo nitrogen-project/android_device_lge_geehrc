@@ -26,8 +26,8 @@ TARGET_CPU_VARIANT := krait
 TARGET_NO_BOOTLOADER := true
 
 # Inline kernel
-KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin/arm-eabi-
-TARGET_KERNEL_CONFIG := geehrc_defconfig	
+KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+TARGET_KERNEL_CONFIG := gee_defconfig	
 TARGET_KERNEL_SOURCE := kernel/lge/geehrc
 
 BOARD_KERNEL_BASE := 0x80200000
@@ -128,23 +128,21 @@ EXTENDED_FONT_FOOTPRINT := true
 MALLOC_SVELTE := true
 
 #TWRP config
+TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_SECONDARY_BRIGHTNESS_PATH := /sys/class/leds/button-backlight/brightness
+TW_MAX_BRIGHTNESS := 250
 TW_THEME := portrait_hdpi
-TW_THEME_LANDSCAPE := landscape_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_REAL_SDCARD := true
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+TW_INCLUDE_JB_CRYPTO := true
+TW_FLASH_FROM_STORAGE := true
 TW_NO_USB_STORAGE := true
-TW_BRIGHTNESS_PATH := /sys/class/backlight/lm3530/brightness
-TW_MAX_BRIGHTNESS := 255
-TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 
-#MultiROM config. MultiROM also uses parts of TWRP config
-MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/lge/geehrc/mr_init_devices.c
-MR_RD_ADDR := 0x82000000
-MR_DPI := hdpi
-MR_DPI_FONT := 216
-MR_FSTAB := device/lge/geehrc/recovery/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x85000000
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/usb-otg"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb-otg"
 
 -include vendor/lge/geehrc/BoardConfigVendor.mk
