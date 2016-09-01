@@ -295,14 +295,14 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!--integer name="config_deviceHardwareKeys">7</integer-->
+    <integer name="config_deviceHardwareKeys">7</integer>
 
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Recent apps dialog
             2 - Recent apps activity in SystemUI
     -->
-    <integer name="config_longPressOnHomeBehavior">1</integer>
+    <integer name="config_longPressOnHomeBehavior">2</integer>
 
     <!-- Package name(s) containing location provider support.
          These packages can contain services implementing location providers,
