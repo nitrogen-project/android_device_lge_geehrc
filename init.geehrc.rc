@@ -380,6 +380,8 @@ service fetch-swv /system/bin/fetch-swv
 # inform hdmi driver that boot completed
 on property:dev.bootcomplete=1
     write /sys/devices/virtual/graphics/fb1/hdmi_boot_completed 1
+    stop cameraserver
+    start cameraserver
 
 # external block api
 on property:sys.hdmi.block=block
