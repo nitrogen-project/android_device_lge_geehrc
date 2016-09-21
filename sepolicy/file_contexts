@@ -118,7 +118,7 @@
 /system/bin/conn_init              u:object_r:conn_init_exec:s0
 /system/bin/init\.geehrc\.wifi\.sh    u:object_r:conn_init_exec:s0
 /system/bin/init\.geehrc\.bt\.sh      u:object_r:bluetooth_loader_exec:s0
-/system/bin/fetch-swv		   u:object_r:bluetooth_loader_exec:s0
+/system/bin/fetch-swv		   u:object_r:fetch-swv_exec:s0
 
 # Persist firmware filesystem
 /persist(/.*)?                   u:object_r:persist_file:s0

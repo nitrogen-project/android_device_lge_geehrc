@@ -1,0 +1,11 @@
+type fetch-swv, domain;
+type fetch-swv_exec, exec_type, file_type;
+
+init_daemon_domain(fetch-swv)
+
+#============= fetch-swv ==============
+allow fetch-swv devpts:chr_file { rw_file_perms };
+allow fetch-swv shell_exec:file { rx_file_perms };
+allow fetch-swv system_file:file { rx_file_perms };
+allow fetch-swv self:process setcurrent;
+
