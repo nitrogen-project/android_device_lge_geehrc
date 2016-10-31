@@ -7,5 +7,10 @@ init_daemon_domain(fetch-swv)
 allow fetch-swv devpts:chr_file { rw_file_perms };
 allow fetch-swv shell_exec:file { rx_file_perms };
 allow fetch-swv system_file:file { rx_file_perms };
+allow fetch-swv toolbox_exec:file { getattr execute read open execute_no_trans };
+allow fetch-swv block_device:blk_file { getattr execute read open };
+allow fetch-swv radio_prop:property_service { set };
+allow fetch-swv property_socket:sock_file { getattr write read open };
+allow fetch-swv init:unix_stream_socket { connectto };
 allow fetch-swv self:process setcurrent;
 
