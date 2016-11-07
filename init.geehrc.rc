@@ -390,3 +390,7 @@ on property:sys.hdmi.block=unblock
 
 on property:sys.hdmi.block=internal_block
     write /sys/devices/virtual/graphics/fb1/hdmi_external_block internal_block
+
+# Restart media in case it starts before qcamerasvr
+on property:init.svc.qcamerasvr=running
+    restart media
