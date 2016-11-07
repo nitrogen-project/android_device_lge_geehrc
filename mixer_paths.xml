@@ -276,7 +276,7 @@
 
     <path name="handset-mic">
         <path name="adc1" />
-        <ctl name="DEC6 Volume" value="99" />
+        <ctl name="DEC6 Volume" value="89" />
     </path>
 
     <path name="headphones">
